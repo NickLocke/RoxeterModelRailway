@@ -22,7 +22,7 @@ The application can raise events to pass to the layout and control panels. It is
 
 Generally, these are simple on/off events (ACON and ACOF) with no additional parameters.
 
-Nore that in a few cases, it has been necessary to spoof the node number, such that the event being raised appears to come from a different node. Specifically, this has been necessary in the [CANDESC](CANDESC.md), because of the way the CANLED64 clones have been configured.
+Nore that in a few cases, it has been necessary to spoof the node number, such that the event being raised appears to come from a different node (typically the node that the even is being sent to rather than the source node). Specifically, this has been necessary in the [CANDESC](CANDESC.md), because of the way the CANLED64 clones have been configured.
 
 ## Modules
 The following module designs have been implemented:
