@@ -24,6 +24,9 @@ Generally, these are simple on/off events (ACON and ACOF) with no additional par
 
 Nore that in a few cases, it has been necessary to spoof the node number, such that the event being raised appears to come from a different node (typically the node that the even is being sent to rather than the source node). Specifically, this has been necessary in the [CANDESC](CANDESC.md), because of the way the CANLED64 clones have been configured.
 
+## Configuration
+The events are configured using the Module Management Console (MMC). The MMC support for Module Definitioon Files (MDF) allows a helpful user interface to be created. This includes the ability to use dropdowns to make appropriate selections, for example selecting the type of event.
+
 ## Modules
 The following module designs have been implemented:
 
