@@ -2,6 +2,10 @@
 
 Control of train descriptions for the entire layout, including the display on Roxeter PSB panel.
 
+Because the Roxeter PSB clock display uses the same CANLED64 clone display hardware, the CANDESC also produces an update to the clock display once per minute.
+
+TODO: Description of operation.
+
 ## Consumed Events
 The CANDESC has five types of consumed event:
 
@@ -51,5 +55,10 @@ The CANDESC application holds a table of relevant track circuits, listing the be
 The CANDESC needs to be aware of routes being set and cleared. The CANDESC application holds a table of relevant routes. An event is added to show when each route is set or cleared, allowing the CANDESC to react appropriately.
 
 ## Produced Events
+The application maintains an internal state for each describer berth, meaning that there is no external interface for the majority of berths. However, events are sent to the bus for any describer berth which phyically exists on the Roxeter PSB panel.
 
-TODO: Get this from the code.
+The events are long on events (ACON) containing the node number of the describer berth which is being addressed and the event number which indicates what to display and in which character position. To fully set a berth, four events need to be sent - one for each of the four character positions in the display berth. 
+
+The CANLED64 clones cannot cope with four events (which they have to action) being sent in quick succession, so each of the events is interspersed with two additional ACON events (sending event number zero to node zero) simply to allow the CANLED64 clones a chance to breathe.
+
+
