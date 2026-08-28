@@ -31,7 +31,7 @@ It is easy for the Arduino code to send events in that way, because the values f
 The calculation to use is:
 
 ```
-(High Byte * 256) + Low Byte
+Event Number = (High Byte * 256) + Low Byte
 ```
 
 Note that in a few cases, it has been necessary to spoof the node number, such that the event being raised appears to come from a different node (typically the node that the even is being sent to rather than the source node). Specifically, this has been necessary in the [CANDESC](CANDESC.md), because of the way the CANLED64 clones have been configured.
