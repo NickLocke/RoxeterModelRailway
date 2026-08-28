@@ -22,7 +22,19 @@ The application can raise events to pass to the layout and control panels. It is
 
 Generally, these are simple on/off events (ACON and ACOF) with no additional parameters.
 
-Nore that in a few cases, it has been necessary to spoof the node number, such that the event being raised appears to come from a different node (typically the node that the even is being sent to rather than the source node). Specifically, this has been necessary in the [CANDESC](CANDESC.md), because of the way the CANLED64 clones have been configured.
+Following a suggestion from Bob Vetterlein, a standard approach to the numbering of produced events has been adopted. The low byte of an event number is used to identify the thing which is being controlled by the event, with the high byte being used to identify the type of event.
+
+For example, if events are needed to indicate "route called", "route set" and "route unavailable", the low byte will indicate which route is being addressed. The high byte might use 1, 2 and 3 for the three possible conditions of the route.
+
+It is easy for the Arduino code to send events in that way, because the values for low and high bytes are provided separately when calling the function to send an event.  However, things are not as clear when monitoring the event later, as the bytes are combined into a single number. 
+
+The calculation to use is:
+
+```
+(High Byte * 256) + Low Byte
+```
+
+Note that in a few cases, it has been necessary to spoof the node number, such that the event being raised appears to come from a different node (typically the node that the even is being sent to rather than the source node). Specifically, this has been necessary in the [CANDESC](CANDESC.md), because of the way the CANLED64 clones have been configured.
 
 ## Configuration
 The events are configured using the Module Management Console (MMC). The MMC support for Module Definitioon Files (MDF) allows a helpful user interface to be created. This includes the ability to use dropdowns to make appropriate selections, for example selecting the type of event.
