@@ -30,11 +30,13 @@ These events are raised by the layout's track occupancy sensors changing from cl
 
 ## Produced Events
 
-Route idle - white / off / off
-Route called and checking availability - off / white (flashing) / off
-Route called but inhibited - off / red (flashing) / off
-Route called and setting up - off / white / off
-Route set - off / green / off
-Route set and in automatic mode - off / green / blue
+The number at the end of each entry is the high-byte value - add that to the switch number between 1 and 8 to get the actual event number.
+
+Route idle - white / off / off - 0
+Route called and checking availability - off / white (flashing) / off - 256
+Route called but inhibited - off / red (flashing) / off - 512
+Route called and setting up - off / white / off - 768
+Route set - off / green / off - 1024
+Route set and in automatic mode - off / green / blue - 1280
 
 
