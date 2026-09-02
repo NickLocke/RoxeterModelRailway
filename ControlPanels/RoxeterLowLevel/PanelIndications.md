@@ -3,6 +3,7 @@
 Numbers listed here relate to the LED number in the sequenc eof 255 LEDs that can be connected to the CANARGB.
 
 ## Points
+
 Shows white lights in line with the set route. When out of correspondence, flashes both sets of lights.
 
 Points | Track | Node | Channel | Always    | Normal    | Reverse
