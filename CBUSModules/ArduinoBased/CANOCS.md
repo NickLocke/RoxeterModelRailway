@@ -61,7 +61,10 @@ Will produce an on event to reverse the points and an off event to restore them 
 The high-byte value required is 6 which translates as 1536 as the event number to add to the point number.
 
 ### Signal Control
-Will produce an on event to clear the signal and an off event to restore it to danger. Note that further work will be needed if three aspect signals are deployed
-on the layout, in order to control the yellow/green display.
+Two events are used because of the need to control three-aspect signals.
 
-The high-byte value required is 7 which translates as 1792 as the event number to add to the signal number.
+One event toggles the signal between red and yellow. The second event toggles the signal between yellow and green. Although it's not prototypical, the panel display indicates the three aspects rather than just red or green.
+
+The high-byte value required for the first (red/yellow) event is 7 which translates as 1792 as the event number to add to the signal number.
+
+The high-byte value required for the second (yellow/green) event is 8 which translates as 2048 as the event number to add to the signal number.
