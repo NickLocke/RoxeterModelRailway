@@ -36,7 +36,9 @@ Event Type = 2
 
 These events are raised by the layout's track occupancy sensors changing from clear to occupied or vice versa.
 
-Event Type = 3
+Event Type = 3 for standard tracks or the first event where there are two routes.
+
+Event type = 8 for the second event where there are two routes.
 
 ### Points Detected (normal or reverse)
 
