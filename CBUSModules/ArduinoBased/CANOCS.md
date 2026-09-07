@@ -71,3 +71,19 @@ A single event is used to indicate the on/off state of the signal. That is then 
 
 The high-byte value required for the event is 7 which translates as 1792 as the event number to add to the signal number.
 
+### Control and Test
+
+Events which are used to control things around the panel / layout and/or undertake test functions.
+
+The high-byte value required for the events is 8 which translates as 2048 as the event number to add to the low-byte request. The low-byte values are as follows:
+
+1 - Set all display elements to red.
+2 - Set all display elements to white.
+3 - Switch off all display elements.
+4 - Request a Start-of-Day response from all track circuits, to allow any trains which are present to be detected at startup.
+
+### Track Occupancy
+
+These events are used to switch on and off track occupancy indications on the panel. In the majority of cases, there is only a single segment on the panel for each track circuit section. However, where points are involved, there can be two different ways in which multiple segments can be illuminated. To accommodate this, there are two high-byte groups, one which is always used and one only used where needed.
+
+The default high-byte value required for the events is 9 which translates as 2304 as the event number to add to the low-byte request. The alternate high-byte value only required for the case where there are multiple events is 10 which translates as 2560 as the event number to add to the low-byte request.
