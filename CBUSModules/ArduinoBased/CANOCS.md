@@ -69,9 +69,13 @@ The high-byte value required is 6 which translates as 1536 as the event number t
 
 ### Signal Control
 
-A single event is used to indicate the on/off state of the signal. That is then indicated on the panel as red or green. Any signals on the layout which have more than two aspects will require another means of controlling their proceed aspects.
+The layout signals on Roxeter have each signal aspect controlled separately, using only "on" events. For example, setting a signal to red will light the red LED and switch off the yellow and green LEDs. Thus, three output events are needed. On the panel, only red or green is shown - so green will be shown if either yellow or green is shown on the layout.
 
-The high-byte value required for the event is 7 which translates as 1792 as the event number to add to the signal number.
+For red, the high-byte value required for the event is 7 which translates as 1792 as the event number to add to the signal number.
+
+For yellow, the high-byte value required for the event is 11 which translates as 2816 as the event number to add to the signal number.
+
+For green, the high-byte value required for the event is 12 which translates as 3072 as the event number to add to the signal number.
 
 ### Control and Test
 
