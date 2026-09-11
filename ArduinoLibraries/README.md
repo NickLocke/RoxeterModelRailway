@@ -10,7 +10,7 @@ flowchart LR
     subgraph "Signal Boxes"
       RoxeterPSB[Roxeter Power Signal Box]
       RoxeterLL[Roxeter Low Level Signal Box]
-      CarvilJunction[CarvilJunctionSignalBox Signal Box]
+      CarvilJunction[Carvil Junction Signal Box]
     end
 
     subgraph "Signal Box Types"
