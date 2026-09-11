@@ -5,7 +5,7 @@ The Roxeter code has been structured into reusable libraries to allow sharing be
 The following libraries have either been written or are envisaged.
 
 <div class="mermaid">
-flowchart TB
+flowchart LR
 
     subgraph "Signal Boxes"
       RoxeterPSB[Roxeter Power Signal Box]
@@ -19,8 +19,8 @@ flowchart TB
       NXpanel[Entrance Exit Panel]
     end
 
-    RoxSignals[Signals Library]
-    RoxPoints[Points Library]
+    RoxSignals[Signals Operation]
+    RoxPoints[Points Operation]
     RoxEventSender[CBUS Events Sender]
 
     RoxeterPSB --> NXpanel
