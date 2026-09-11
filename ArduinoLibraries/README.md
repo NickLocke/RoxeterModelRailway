@@ -15,3 +15,5 @@ classDiagram
 </div>
 
 V3
+
+[structure](Test.md).
