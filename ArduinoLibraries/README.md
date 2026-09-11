@@ -7,13 +7,17 @@ The following libraries have either been written or are envisaged.
 <div class="mermaid">
 flowchart TB
 
-    RoxeterPSB[Roxeter Power Signal Box]
-    RoxeterLL[Roxeter Low Level Signal Box]
-    CarvilJunction[CarvilJunctionSignalBox Signal Box]
+    subgraph "Signal Boxes"
+      RoxeterPSB[Roxeter Power Signal Box]
+      RoxeterLL[Roxeter Low Level Signal Box]
+      CarvilJunction[CarvilJunctionSignalBox Signal Box]
+    end
 
-    IFSpanel[Individual Function Switch Panel]
-    OCSpanel[One Control Switch Panel]
-    NXpanel[Entrance Exit Panel]
+    subgraph "Signal Box Types"
+      IFSpanel[Individual Function Switch Panel]
+      OCSpanel[One Control Switch Panel]
+      NXpanel[Entrance Exit Panel]
+    end
 
     RoxSignals[Signals Library]
     RoxPoints[Points Library]
