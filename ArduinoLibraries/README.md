@@ -1,7 +1,4 @@
----
-layout: default
-title: Class Hierarchy
----
+# Arduino Libraries
 
 The Roxeter code has been structured into reusable libraries to allow sharing between the different types of control panel, avoiding the need for code to be written (or copied) multiple times.
 
