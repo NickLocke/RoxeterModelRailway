@@ -5,19 +5,32 @@ The Roxeter code has been structured into reusable libraries to allow sharing be
 The following libraries have either been written or are envisaged.
 
 <div class="mermaid">
-flowchart LR
+flowchart TB
 
-    Sketch[FastClock.ino]
+    RoxeterPSB[Roxeter Power Signal Box]
+    RoxeterLL[Roxeter Low Level Signal Box]
+    CarvilJunction[CarvilJunctionSignalBox Signal Box]
 
-    Config[Config]
-    Clock[Clock]
-    Display[Display]
-    RTC[RTC]
+    IFSpanel[Individual Function Switch Panel]
+    OCSpanel[One Control Switch Panel]
+    NXpanel[Entrance Exit Panel]
 
-    Sketch --> Config
-    Sketch --> Clock
-    Sketch --> Display
+    RoxSignals[Signals Library]
+    RoxPoints[Points Library]
+    RoxEventSender[CBUS Events Sender]
 
-    Display --> RTC
-    Clock --> RTC
+    RoxeterPSB --> NXpanel
+    RoxeterLL --> OCSpanel
+    CarvilJunction --> IFSpanel
+
+    NXpanel --> RoxSignals
+    OCSpanel --> RoxSignals
+    IFSpanel --> RoxSignals
+
+    NXpanel --> RoxPoints
+    OCSpanel --> RoxPoints
+    IFSpanel --> RoxPoints
+
+    RoxSignals --> RoxEventSender
+    RoxPoints --> RoxEventSender
 </div>
