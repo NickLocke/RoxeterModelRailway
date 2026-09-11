@@ -1,9 +1,7 @@
-<script type="module">
-import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
-mermaid.initialize({
-startOnLoad: true
-});
-</script>
+---
+layout: default
+title: Class Hierarchy
+---
 
 The Roxeter code has been structured into reusable libraries to allow sharing between the different types of control panel, avoiding the need for code to be written (or copied) multiple times.
 
