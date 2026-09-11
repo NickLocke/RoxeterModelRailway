@@ -1,2 +1,5 @@
-title: Roxeter Model Railway
-theme: minima
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
