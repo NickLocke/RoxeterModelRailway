@@ -5,15 +5,19 @@ The Roxeter code has been structured into reusable libraries to allow sharing be
 The following libraries have either been written or are envisaged.
 
 <div class="mermaid">
-classDiagram
-  class Clock
-  class FastClock
-  class RealTimeClockclass RTC_DS3231
-  Clock <|-- FastClock
-  Clock <|-- RealTimeClock
-  RealTimeClock <|-- RTC_DS3231
+flowchart LR
+
+    Sketch[FastClock.ino]
+
+    Config[Config]
+    Clock[Clock]
+    Display[Display]
+    RTC[RTC]
+
+    Sketch --> Config
+    Sketch --> Clock
+    Sketch --> Display
+
+    Display --> RTC
+    Clock --> RTC
 </div>
-
-V3
-
-[structure](Test.md).
