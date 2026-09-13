@@ -1,0 +1,7 @@
+# Accessory Control
+
+    RAILWAY_LIGHTS = 0,
+    GENERAL_LIGHTS = 1,
+    SOUND_EFFECTS = 2,
+    LONG_LINE_PA_CONTROL = 3,
+    STATION_ANNOUNCEMENTS = 4,
