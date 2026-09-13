@@ -27,6 +27,7 @@ EventSender::Signal::setGreenWithFeather(78, EventSender::SignalFeathers::LEFT_F
     setGreen(uint8_t signalNumber);
     setGreenWithFeather(uint8_t signalNumber, SignalFeathers feather);
     setSubsidiary(uint8_t signalNumber);
+    allSignalsOn();
 
 ## Points
 
