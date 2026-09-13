@@ -12,20 +12,48 @@ The following event groups are supported:
 - [Control Panel](ControlPanel.md) - 0x3
 - [Accessory Control](AccessoryControl.md) - 0x4
 
-A total of sixteen event groups could be supported if necessary.
+A total of sixteen event groups could be supported if necessary. The available API calls for each event group are listed below.  To allow the function names to be kept short, the event groups are each in a separate namespace. Therefore, the structure of calls is similar to these examples:
 
-The event number sent to CBUS is made up of one Word, so a high Byte and a low Byte. The low Byte is used to identify a specific target for the event - a switch, a signal mast, etc. 
+```c
+EventSender::Points::moveNormal(80);
+EventSender::Signal::setGreenWithFeather(78, EventSender::SignalFeathers::LEFT_FIRST);
+```
 
-The high Byte is used to specify what type of device is being targeted in the high Nibble and what it is required to do in the low Nibble.
+## Signal
 
-The hexadecimal values of the high Nibble are as shown in the list above. The values for the low Nibbles are defined on the approriate specific pages.
+    static bool setRed(uint8_t signalNumber);
+    static bool setYellow(uint8_t signalNumber);
+    static bool setYellowWithFeather(uint8_t signalNumber, SignalFeathers feather);
+    static bool setGreen(uint8_t signalNumber);
+    static bool setGreenWithFeather(uint8_t signalNumber, SignalFeathers feather);
+    static bool setSubsidiary(uint8_t signalNumber);
 
-Note that this detail is useful when monitoring events on the CBUS, but is not needed to actually use the API calls.
+## Points
 
-## Worked Example
+    static bool moveNormal(uint8_t pointsNumber);
+    static bool moveReverse(uint8_t pointsNumber);
+    static bool showNormal(uint8_t pointsNumber);
+    static bool showReverse(uint8_t pointsNumber);
+    static bool showLocked(uint8_t pointsNumber);
+    static bool showOutOfCorrespondence(uint8_t pointsNumber);
 
-Assume that we have a set of points which we have chosen to number as 78 which is 4E in hexadecimal. We wish to send an event to show a Reverse indication for those points. We can see from above that the high Nibble value to indicate points is 0x1. We can see from the points documentation page that the low Nibble vale for a reverse indication is 0x2.
+## Track Occupancy
 
-So the first byte of the event number is made up from those two Nibbles, giving 0x12. The second byte contains only the number for the points, so that is 0x4E.
+    static bool requestUpdate();
+    static bool clearIndication(uint8_t trackCircuitNumber);
+    static bool showIndication(uint8_t trackCircutNumber, TrackOccupancyGroups trackOccupancyGroup);
 
-Combining those two Bytes to make the Word to send to CBUS give 0x124E which is 4686 in decimal.
+## Control Panel
+
+    static bool setElementOn(uint8_t controlPanelNumber, ControlPanelGroups controlPanelGroup);
+    static bool setElementOff(uint8_t controlPanelNumber, ControlPanelGroups controlPanelGroup);
+
+## Accessory Control
+
+    static bool setRailwayLight(uint8_t lightNumber, bool state);
+    static bool setGeneralLight(uint8_t lightNumber, bool state);
+    static bool playSoundEffect(uint8_t effectNumber);
+    static bool selectLongLinePublicAddress(uint8_t publicAddressNumber);
+    static bool cancelLongLinePublicAddress();
+    static bool playStationAnnouncement(uint8_t announcementNumber);
+
