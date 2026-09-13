@@ -26,4 +26,4 @@
 
 ### setSubsidiary(uint8_t signalNumber);
 
-### allSignalsOn();
+### allSignalsOn(uint8_t areaNumber);
