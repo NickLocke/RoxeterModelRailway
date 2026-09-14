@@ -1,22 +1,29 @@
 # Points
-## Low byte values
 
-    REQUEST_MOVEMENT = 0x0,
-    NORMAL_INDICATION = 0x1,
-    REVERSE_INDICATION = 0x2,
-    LOCKED_INDICATION = 0x3,
-    OUT_OF_CORRESPONDENCE_INDICATION = 0x4,    
+All points on Roxeter are driven by servos connected to a CANMIO. Conceptually, the points are Normal when the CANMIO output is off and Reverse when it is on. Incoming events from the CANMIO are used to gain feedback on the position of the points, but that is documented elsewhere as this section of the documentation is concerned only with produced events.
 
 ## Available functions    
 
 ### moveNormal(uint8_t pointsNumber)
 
-### moveReverse(uint8_t pointsNumber);
+This function will send a single ACON event numbered 16 plus the specific points number. The consuming module should be configured to drive the servo to its Normal position.
 
-### showNormal(uint8_t pointsNumber);
+### moveReverse(uint8_t pointsNumber)
 
-### showReverse(uint8_t pointsNumber);
+This function will send a single ACOF event numbered 16 plus the specific points number. The consuming module should be configured to drive the servo to its Reverse position.
 
-### showLocked(uint8_t pointsNumber);
+### showNormal(uint8_t pointsNumber)
 
-### showOutOfCorrespondence(uint8_t pointsNumber);
+This function will send a single ACON event numbered 17 plus the specific points number. The consuming modules should be configured to switch on the Normal indication and extinguish any conflicting indications (Reverse and Out of Correspondence, for example).
+
+### showReverse(uint8_t pointsNumber)
+
+This function will send a single ACON event numbered 18 plus the specific points number. The consuming modules should be configured to switch on the Reverse indication and extinguish any conflicting indications (Normal and Out of Correspondence, for example).
+
+### showLocked(uint8_t pointsNumber)
+
+This function will send a single ACON event numbered 19 plus the specific points number. The consuming modules should be configured to switch on the Locked indication and extinguish any conflicting indications (Out of Correspondence, for example).
+
+### showOutOfCorrespondence(uint8_t pointsNumber)
+
+This function will send a single ACON event numbered 20 plus the specific points number. The consuming modules should be configured to switch on the Out of Correspondence indication and extinguish any conflicting indications (Normal, Reverse and Locked, for example).

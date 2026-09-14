@@ -19,7 +19,7 @@ EventSender::Points::moveNormal(80);
 EventSender::Signal::setGreenWithFeather(78, EventSender::SignalFeathers::LEFT_FIRST);
 ```
 
-## Signal
+## [Signal](Signal.md)
 
     setRed(uint8_t signalNumber);
     setYellow(uint8_t signalNumber);
