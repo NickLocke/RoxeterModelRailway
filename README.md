@@ -7,12 +7,5 @@ Having prototypical signalling is a key part of the modelling approach, so the l
 
 The layout makes heavy use of [CBUS modules](CBUSModules)
 
-The code has been structured into a number of libraries to allow for re-use:
+The code has been structured into a number of [libraries](ArduinoLibraries) to allow for re-use.
 
-[Roxeter Event Sender](ArduinoLibraries/RoxEventSender)
-Roxeter Entrance Exit Panel
-Roxeter Individual Function Switch Panel
-Roxeter One Control Switch Panel
-[Roxeter Points Control](ArduinoLibraries/RoxPoints)
-Roxeter Routes
-[Roxeter Signals Control](ArduinoLibraries/RoxSignals)
