@@ -29,7 +29,7 @@ EventSender::Signal::setGreenWithFeather(78, EventSender::SignalFeathers::LEFT_F
     setSubsidiary(uint8_t signalNumber);
     allSignalsOn(uint8_t areaNumber);
 
-## Points
+## [Points](Points.md)
 
     moveNormal(uint8_t pointsNumber);
     moveReverse(uint8_t pointsNumber);
@@ -38,18 +38,18 @@ EventSender::Signal::setGreenWithFeather(78, EventSender::SignalFeathers::LEFT_F
     showLocked(uint8_t pointsNumber);
     showOutOfCorrespondence(uint8_t pointsNumber);
 
-## Track Occupancy
+## [Track Occupancy](TrackOccupancy.md)
 
     requestUpdate();
     clearIndication(uint8_t trackCircuitNumber);
     showIndication(uint8_t trackCircutNumber, TrackOccupancyGroups trackOccupancyGroup);
 
-## Control Panel
+## [Control Panel](ControlPanel.md)
 
     setElementOn(uint8_t controlPanelNumber, ControlPanelGroups controlPanelGroup);
     setElementOff(uint8_t controlPanelNumber, ControlPanelGroups controlPanelGroup);
 
-## Accessory Control
+## [Accessory Control](AccessoryControl.md)
 
     setRailwayLight(uint8_t lightNumber, bool state);
     setGeneralLight(uint8_t lightNumber, bool state);
