@@ -38,3 +38,11 @@ flowchart LR
     RoxSignals --> RoxEventSender
     RoxPoints --> RoxEventSender
 </div>
+
+[Roxeter Event Sender](RoxEventSender)
+Roxeter Entrance Exit Panel
+Roxeter Individual Function Switch Panel
+Roxeter One Control Switch Panel
+[Roxeter Points Control](RoxPoints)
+Roxeter Routes
+[Roxeter Signals Control](RoxSignals)
