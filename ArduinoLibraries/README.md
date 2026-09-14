@@ -27,22 +27,28 @@ flowchart LR
     RoxeterLL --> OCSpanel
     CarvilJunction --> IFSpanel
 
-    NXpanel --> RoxSignals
-    OCSpanel --> RoxSignals
-    IFSpanel --> RoxSignals
+    NXpanel --> RoxRoutes
+    OCSpanel --> RoxRoutes
+    IFSpanel --> RoxRoutes
 
-    NXpanel --> RoxPoints
-    OCSpanel --> RoxPoints
-    IFSpanel --> RoxPoints
+    RoxRoutes --> RoxSignals
+
+    RoxRoutes --> RoxPoints
 
     RoxSignals --> RoxEventSender
     RoxPoints --> RoxEventSender
 </div>
 
 [Roxeter Event Sender](RoxEventSender)
-Roxeter Entrance Exit Panel
-Roxeter Individual Function Switch Panel
-Roxeter One Control Switch Panel
+
+[Roxeter Entrance Exit Panel](RoxNxPanel)
+
+[Roxeter Individual Function Switch Panel](RoxIfsPanel)
+
+[Roxeter One Control Switch Panel](RoxOcsPanel)
+
 [Roxeter Points Control](RoxPoints)
-Roxeter Routes
+
+[Roxeter Routes](RoxRoutes)
+
 [Roxeter Signals Control](RoxSignals)
