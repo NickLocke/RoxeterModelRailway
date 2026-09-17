@@ -9,3 +9,4 @@ The layout makes heavy use of [CBUS modules](CBUSModules)
 
 The code has been structured into a number of [libraries](ArduinoLibraries) to allow for re-use.
 
+There are some quirks around how the development environment is configured and with the structure of the C++ code. They have been documented [here](Configurations), so far as memory allows.
