@@ -66,8 +66,8 @@ Emergency Button Push     | 5
 Emergency Button Pull     | 6
 Describer Input Button    | 7
 Describer Action Button   | 8
-Telephone                 | 9
-Alarm                     | 10
+Telephone Button          | 9
+Alarm Button              | 10
 
 ## Event Number
 

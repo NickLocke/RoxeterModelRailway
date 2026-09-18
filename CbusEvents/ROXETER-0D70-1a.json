@@ -76,6 +76,123 @@
       ]
     },
     {
+      "displayTitle": "Event Type",
+      "type": "EventVariableSelect",
+      "visibilityLogic": 
+      {
+        "JLL":{"==":[{"EV":[1]}, 3]}
+      },
+      "eventVariableIndex": 2,
+      "options": [
+        {
+          "value": 0,
+          "label": "Unknown"
+        },
+        {
+          "value": 1,
+          "label": "Route Switch"
+        },
+        {
+          "value": 2,
+          "label": "Automatic Switch"
+        },
+        {
+          "value": 255,
+          "label": "Unknown"
+        }
+      ]
+    },
+    {
+      "displayTitle": "Event Type",
+      "type": "EventVariableSelect",
+      "visibilityLogic": 
+      {
+        "JLL":{"==":[{"EV":[1]}, 4]}
+      },
+      "eventVariableIndex": 2,
+      "options": [
+        {
+          "value": 0,
+          "label": "Unknown"
+        },
+        {
+          "value": 1,
+          "label": "Signal Switch"
+        },
+        {
+          "value": 2,
+          "label": "Point Switch Normal"
+        },
+        {
+          "value": 3,
+          "label": "Point Switch Reverse"
+        },
+        {
+          "value": 255,
+          "label": "Unknown"
+        }
+      ]
+    },
+    {
+      "displayTitle": "Event Type",
+      "type": "EventVariableSelect",
+      "visibilityLogic": 
+      {
+        "JLL":{"==":[{"EV":[1]}, 5]}
+      },
+      "eventVariableIndex": 2,
+      "options": [
+        {
+          "value": 0,
+          "label": "Unknown"
+        },
+        {
+          "value": 1,
+          "label": "Point Switch Normal"
+        },
+        {
+          "value": 2,
+          "label": "Point Switch Reverse"
+        },
+        {
+          "value": 3,
+          "label": "Entrance Exit Button Push"
+        },
+        {
+          "value": 4,
+          "label": "Entrance Button Pull"
+        },
+        {
+          "value": 5,
+          "label": "Emergency Button Push"
+        },
+        {
+          "value": 6,
+          "label": "Emergency Button Pull"
+        },
+        {
+          "value": 7,
+          "label": "Describer Input Button"
+        },
+        {
+          "value": 8,
+          "label": "Describer Action Button"
+        },
+        {
+          "value": 9,
+          "label": "Telephone Button"
+        },
+        {
+          "value": 10,
+          "label": "Alarm Button"
+        },
+        {
+          "value": 255,
+          "label": "Unknown"
+        }
+      ]
+    },
+    {
       "displayTitle": "Event Number",
       "type": "EventVariableNumber",
       "eventVariableIndex": 3
