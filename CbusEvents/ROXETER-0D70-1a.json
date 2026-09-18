@@ -1,0 +1,84 @@
+{
+  "timestamp": "202608271610",
+  "moduleName": "ROXETER",
+  "eventVariables": [
+    {
+      "displayTitle": "Event Group",
+      "type": "EventVariableSelect",
+      "eventVariableIndex": 1,
+      "options": [
+        {
+          "value": 0,
+          "label": "Unknown"
+        },
+        {
+          "value": 1,
+          "label": "Track Occupancy"
+        },
+        {
+          "value": 2,
+          "label": "Points"
+        },
+        {
+          "value": 255,
+          "label": "Unknown"
+        }
+      ]
+    },
+    {
+      "displayTitle": "Event Type",
+      "type": "EventVariableSelect",
+      "visibilityLogic": 
+      {
+        "JLL":{"==":[{"EV":[1]}, 1]}
+      },
+      "eventVariableIndex": 2,
+      "options": [
+        {
+          "value": 0,
+          "label": "Unknown"
+        },
+        {
+          "value": 1,
+          "label": "Track Occupancy Change"
+        },
+        {
+          "value": 255,
+          "label": "Unknown"
+        }
+      ]
+    },
+    {
+      "displayTitle": "Event Type",
+      "type": "EventVariableSelect",
+      "visibilityLogic": 
+      {
+        "JLL":{"==":[{"EV":[1]}, 2]}
+      },
+      "eventVariableIndex": 2,
+      "options": [
+        {
+          "value": 0,
+          "label": "Unknown"
+        },
+        {
+          "value": 1,
+          "label": "Points Normal Detection"
+        },
+        {
+          "value": 2,
+          "label": "Points Reverse Detection"
+        },
+        {
+          "value": 255,
+          "label": "Unknown"
+        }
+      ]
+    },
+    {
+      "displayTitle": "Event Number",
+      "type": "EventVariableNumber",
+      "eventVariableIndex": 3
+    }
+  ]
+}

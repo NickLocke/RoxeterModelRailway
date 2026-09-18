@@ -7,3 +7,6 @@
 
 
 ## Lists of Objects
+
+
+## Instance vs Static
