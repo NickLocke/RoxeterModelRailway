@@ -20,6 +20,18 @@
           "label": "Points"
         },
         {
+          "value": 3,
+          "label": "One Control Switch Panel Inputs"
+        },
+        {
+          "value": 4,
+          "label": "Individual Function Switch Panel Inputs"
+        },
+        {
+          "value": 5,
+          "label": "Entrance Exit Panel Inputs"
+        },
+        {
           "value": 255,
           "label": "Unknown"
         }
