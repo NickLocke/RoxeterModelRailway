@@ -6,6 +6,8 @@ The Pico supports driving the CAN IC (MCP2562) from software, so the alternate M
 
 Although the Pico has a number of GPIO pins, these have not been used to date. The only interface with the outside world is via CBUS.
 
+It is important to fully reset a Pico before using it for a different purpose. This is because having RAM and Flash memory in random states, and not initialised, may cause the module's behaviour to be very strange and confusing. A [reset process](PicoResetProcess.md) is provided.
+
 ## CBUS Events
 The modules can consume events to understand what is happening on the layout and control panels. They can also produce events to drive the layout and indications on the control panel.
 

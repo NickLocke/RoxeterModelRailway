@@ -1,6 +1,6 @@
 # Track Occupancy
 
-Track occupancy on Roxeter is detected by DTC modules feeding CANMIO inputs. The events produced by track occupancy are document elsewhere, as this section of the documentation is concerned only with produced events. The one exception to that is the `requestUpdate` function described below.
+Track occupancy on Roxeter is detected by DTC modules feeding CANMIO inputs. The events produced by track occupancy are documented elsewhere, as this section of the documentation is concerned only with produced events. The one exception to that is the `requestUpdate` function described below.
 
 ## Available functions
 
