@@ -8,17 +8,17 @@ Track occupancy on Roxeter is detected by DTC modules feeding CANMIO inputs. The
 
 This function will send a single ACON event numbered 12032 plus the specific area number. The event should be taught as a Start of Day event to any module which handles detection for track circuits in the area concerned. Those modules should respond to that event by sending the current occupancy status for all tracks that they are monitoring. Those incoming events can then be processed as necessary.
 
-### clearIndication(uint16_t trackCircuitNumber)
+### clearIndication(uint8_t trackCircuitNumber)
 
 This function will send a single ACOF event numbered 8448 plus the specific track circuit number. The consuming module should extinguish all track occupancy indications for the track circuit concerned.
 
-### occupiedIndication(uint16_t trackCircutNumber)
+### occupiedIndication(uint8_t trackCircutNumber)
 
 See below for the more specific version of this function.
 
 This function will send a single ACON event numbered 8448 plus the specific track circuit number. The consuming module should illuminate all track occupancy indications for the track circuit concerned. Where there are also route lights for the same section of track, they should be extinguished although, of course, if RGB LEDs rather than individual LEDs are used that will be implicit.
 
-### occupiedIndication(uint16_t trackCircutNumber, TrackOccupancyGroups trackOccupancyGroup)
+### occupiedIndication(uint8_t trackCircutNumber, TrackOccupancyGroups trackOccupancyGroup)
 
 This function is used where there are multiple routes through a track circuit, and some lights should be illuminated selectively. See above for the simpler version of this function.
 
