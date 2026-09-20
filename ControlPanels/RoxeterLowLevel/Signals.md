@@ -32,6 +32,6 @@ This page provides an easy reference for use when configuring signals in CBUS an
 
 
 
-1 - The definitive source of these numbers is `RoxeterSignalData.cpp` in the `RoxTSignals` library.
+1 - The definitive source of these numbers is `RoxeterSignalData.cpp` in the `RoxSignals` library.
 
 2 - These are the event number which drive signal aspects on the layout. Control panels, which only show red or green, should treat the yellow and green events in the same way.

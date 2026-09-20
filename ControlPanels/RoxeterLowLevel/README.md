@@ -37,5 +37,6 @@ In addition, the interlocking is handled by an Arduino-based module which has be
 
 Crib sheets:
 
+- [Points](Points.md)
 - [Signals](Signals.md)
 - [Track Circuits](TrackCircuits.md)
