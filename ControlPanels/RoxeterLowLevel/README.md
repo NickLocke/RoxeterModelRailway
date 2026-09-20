@@ -34,3 +34,8 @@ There are two CBUS modules located within the panel:
 In addition, the interlocking is handled by an Arduino-based module which has been named CANOCS:
 
 - CANOCS - node 3150
+
+Crib sheets:
+
+- [Signals](Signals.md)
+- [Track Circuits](TrackCircuits.md)
