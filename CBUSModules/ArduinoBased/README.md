@@ -1,5 +1,7 @@
 # Arduino Based CBUS Modules
 
+**NOTE THAT THIS DOCUMENTATION WILL BE SUPERSEDED AS MORE LIBRARIES ARE INTRODUCED AND SPECIFIC MODULES BECOME REDUNATNT**
+
 ## Hardware
 A Raspberyy Pi Pico mounted on a partially populated CANETHERX board.
 The Pico supports driving the CAN IC (MCP2562) from software, so the alternate MCP2515 IC is not needed.

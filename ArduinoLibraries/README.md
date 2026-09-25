@@ -27,13 +27,13 @@ flowchart LR
     RoxeterLL --> OCSpanel
     CarvilJunction --> IFSpanel
 
-    NXpanel --> RoxRoutes
-    OCSpanel --> RoxRoutes
-    IFSpanel --> RoxRoutes
+    NXpanel --> RoxRouting
+    OCSpanel --> RoxRouting
+    IFSpanel --> RoxRouting
 
-    RoxRoutes --> RoxSignals
+    RoxRouting --> RoxSignals
 
-    RoxRoutes --> RoxPoints
+    RoxRouting --> RoxPoints
 
     RoxSignals --> RoxEventSender
     RoxPoints --> RoxEventSender
@@ -49,6 +49,6 @@ flowchart LR
 
 [Roxeter Points Control](RoxPoints)
 
-[Roxeter Routes](RoxRoutes)
+[Roxeter Routes](RoxRouting)
 
 [Roxeter Signals Control](RoxSignals)

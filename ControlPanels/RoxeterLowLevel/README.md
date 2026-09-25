@@ -40,3 +40,4 @@ Crib sheets:
 - [Points](Points.md)
 - [Signals](Signals.md)
 - [Track Circuits](TrackCircuits.md)
+- [Switch Indications](SwitchIndications.md)
