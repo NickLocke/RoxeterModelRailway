@@ -53,3 +53,4 @@ Where the signal is a shunt rather than a subsidiary, consuming modules should s
 ### allSignalsOn(uint8_t areaNumber)
 
 This function will send a single ACON event numbered 3840 plus the specific area number. It is intended for use during startup and, possibly, in an emergency scenario. It addresses a conceptual area rather than a specific signal. The event may be consumed by multiple signal-driving modules. In each case, consuming modules should be configured to switch on the red aspect and extinguish all others, including feathers and subsidiary aspects.
+
