@@ -30,7 +30,6 @@ public:
     static bool setGreen(uint8_t signalNumber);
     static bool setGreenWithFeather(uint8_t signalNumber, SignalFeathers feather);
     static bool setSubsidiary(uint8_t signalNumber);
-    static bool allSignalsOn(uint8_t areaNumber);
     static void documentEvents();
     static const char *getTypeNameFromNumber(uint8_t eventType);
   };
