@@ -12,7 +12,7 @@ Points cannot be moved if the track circuit monitoring them is occupied.
 
 Points cannot be moved if any signal protecting them is displaying an off aspect, or is waiting for approach locking to release.
 
-Points feed their Normal or Reverse position back through detection.
+Points feed their Normal or Reverse position back through detection.  For crossovers etc., where multiple sets of points are involved, all of the sets must be detected.
 
 
 
