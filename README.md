@@ -14,3 +14,5 @@ There are some quirks around how the development environment is configured and w
 Information on how [CBUS events](CbusEvents) are used on Roxeter is provided.
 
 Look [here](EventFlow) for information on how events flow and are handled.
+
+Some background on [operation](SignallingOperation) and interlocking to help demystify what is going on.
