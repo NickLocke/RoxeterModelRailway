@@ -15,5 +15,21 @@ Points cannot be moved if any signal protecting them is displaying an off aspect
 Points feed their Normal or Reverse position back through detection.  For crossovers etc., where multiple sets of points are involved, all of the sets must be detected.
 
 
+## Point Control Switches
 
+Switches have three associated lights:
 
+- Normal
+- Locked / Out of Correspondence
+- Reverse
+
+The operation of the lights is basically prototypical, but has been enhanced a little for effect.
+
+The Normal and Reverse lights are steadily illuminated when the points are set and locked in that position. That is the case whether the points were set in position by the control switch itself, or by the route setting process.
+
+The centre light will illuminate steadily to show that the points are locked in position. Again, that is the case regardless of what is causing the lock.
+
+The centre light will flash whenever the points and their controls are not in sync:
+
+- The points are not detected either normal or reverse
+- The point switch does not correspond with the position of the points.
