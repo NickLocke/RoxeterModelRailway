@@ -1,6 +1,8 @@
-# Library to Panel Event Notification
+# Library to Library Notification
 
-Because functionality is abstracted away into libraries such as RoxRouting, it is necessary for those libraries to be able to report things happening to the controlling panel. Because we will have three different types of panel, the reportin mechanism needs to be generic - so we use interfaces.
+See also [here](InterfacesChatGpt.md).
+
+Because functionality is abstracted away into libraries such as RoxRouting, it is necessary for those libraries to be able to report things happening to the controlling panel or potentially other libraries. Because we will have three different types of panel, the reporting mechanism needs to be generic - so we use interfaces.
 
 For example, `RoxRouting` may need to report:
 
