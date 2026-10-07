@@ -38,6 +38,7 @@ flowchart TB
     subgraph EventHandlerLibrary["Event Handler Library"]
         EventHandler["RoxEventHandler"]
         EventHandlerPointsListener["EventHandlerPointsListener"]
+        EventHandlerTrackCircuitsListener["EventHandlerTrackCircuitsListener"]
     end
 
     %% Depends on is where the class is passed into the constructor of the object.
@@ -48,12 +49,11 @@ flowchart TB
     XXX -->|depends on| TrackCircuits
     XXX -->|depends on| EventHandler
 
-    routing -->|depends on| Signals
-    routing -->|depends on| Points
-    routing -->|depends on| TrackCircuits
+    Routing -->|depends on| Signals
+    Routing -->|depends on| Points
+    Routing -->|depends on| TrackCircuits
 
     EventHandler -->|depends on| Signals
-    EventHandler -->|depends on| TrackCircuits
     EventHandler -->|depends on| XXX
 
     %% Notifies is the process of a library calling one of its listeners
@@ -62,12 +62,15 @@ flowchart TB
     TrackCircuits -->|notifies| TrackCircuitsRoutingListener
     TrackCircuits -->|notifies| TrackCircuitsSignalsListener
     EventHandler -->|notifies| EventHandlerPointsListener
+    EventHandler -->|notifies| EventHandlerTrackCircuitsListener
 
     %% Implements is where a class implements one of the other class's interfaces.
 
     XXX -.->|implements| RoutingListener
     Signals -.->|implements| TrackCircuitsSignalsListener
     Routing -.->|implements| TrackCircuitsRoutingListener
+    Points -.->|implements| EventHandlerPointsListener
+    TrackCircuits -.->|implements| EventHandlerTrackCircuitsListener
 
     Routing -->|uses| EventSender
     Signals -->|uses| EventSender
