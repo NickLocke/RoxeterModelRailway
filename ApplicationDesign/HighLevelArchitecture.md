@@ -53,7 +53,6 @@ flowchart TB
     Routing -->|depends on| Points
     Routing -->|depends on| TrackCircuits
 
-    EventHandler -->|depends on| Signals
     EventHandler -->|depends on| XXX
 
     %% Notifies is the process of a library calling one of its listeners
