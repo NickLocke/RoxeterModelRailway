@@ -1,7 +1,6 @@
 # High Level Architecture
 
-<div class="mermaid">
-
+```mermaid
 flowchart TB
 
     %% As this is a high-level diagram, don't spell out all three box types separately.
@@ -74,6 +73,7 @@ flowchart TB
     Routing -.->|implements| TrackCircuitsRoutingListener
     Points -.->|implements| EventHandlerPointsListener
     TrackCircuits -.->|implements| EventHandlerTrackCircuitsListener
+    XXX -.->|implements one of OCS, IFS or NX - OCS shown here| EventHandlerOcsPanelListener
 
     Routing -->|uses| EventSender
     Signals -->|uses| EventSender
@@ -81,4 +81,4 @@ flowchart TB
     TrackCircuits -->|uses| EventSender
     XXX -->|uses| EventSender
 
-</div>
+```
